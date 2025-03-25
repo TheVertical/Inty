@@ -43,7 +43,12 @@ namespace Inty
             services.AddSwaggerGen(
                 c =>
                 {
-                    c.SwaggerDoc("v1", new OpenApiInfo {Title = "My API", Version = "v1"});
+                    c.SwaggerDoc("v1", new OpenApiInfo
+                    {
+                        Title = "Russian Bank Gateway",
+                        Version = "v1",
+                        Description = "Russian bank API gateway to get currency exchange rate."
+                    });
 
                     c.DescribeAllParametersInCamelCase();
 
