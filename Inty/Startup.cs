@@ -1,9 +1,9 @@
 using System;
 using Microsoft.OpenApi.Models;
 using System.IO;
+using Inty.Currencies.Services;
 using Inty.RussianBank;
 using Inty.RussianBank.Adapters;
-using Inty.Valutes.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -56,7 +56,7 @@ namespace Inty
             );
 
             services.AddScoped<IRussianBankAdapter, RussianBankAdapter>();
-            services.AddScoped<IValuteCursInfoService, ValuteCursInfoService>();
+            services.AddScoped<ICurrencyExchangeRateInfoService, CurrencyExchangeRateInfoService>();
 
             services.AddOptions<RussianBankIntegrationOptions>()
                 .BindConfiguration("RussianBank")

@@ -5,6 +5,6 @@ namespace Inty.RussianBank.Adapters
 {
     public interface IRussianBankAdapter
     {
-        Task<ValuteData?> GetCurceOnDate(DateTime? dateTime);
+        Task<ValuteData?> GetCurrenciesExchangeRateOnDate(DateTime? dateTime);
     }
 }

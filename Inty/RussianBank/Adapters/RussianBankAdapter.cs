@@ -16,7 +16,7 @@ namespace Inty.RussianBank.Adapters
             _integrationOptions = integrationOptions;
         }
 
-        public async Task<ValuteData?> GetCurceOnDate(DateTime? dateTime)
+        public async Task<ValuteData?> GetCurrenciesExchangeRateOnDate(DateTime? dateTime)
         {
             ValuteData? data = null;
             var client = CreateClient();
